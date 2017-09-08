@@ -1,0 +1,136 @@
+$text-color: #22bbcc;
+$background-color: #ffffff;
+$background-color-source: #22eedd;
+$background-color-menu: #11ffcc;
+@font-face {
+  font-family: "AvantGarde";
+  src: url('lib/AvantGarde-Demi.woff');
+}
+
+div.search {
+  padding: 30px 0;
+}
+
+form {
+  position: relative;
+  width: 300px;
+  // margin-top: 20px;
+  margin: 20px auto;
+}
+
+.d1 {
+  background: #ffffff;
+}
+
+.d1 input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  // border: 1px solid #dddddd;
+  border-radius: 5px;
+  outline: none;
+  background: #ffffff;
+  color: #9E9C9C;
+}
+
+.tag-type {
+  color: #888888;
+}
+.close{
+  line-height: 0px;
+  margin:0 5;
+  display: inline-block;
+    border: 1px solid red;
+  width:10;
+  height:10;
+  // background-color: red;
+}
+.tags {
+  // background:$background-color-source;
+  float: left;
+  border: 1px solid #dddddd;
+  margin: 5;
+  padding: 2 4;
+}
+// .d1 button {
+//   position: absolute;
+//   top: 0;
+//   right: 0px;
+//   width: 82px;
+//   height: 42px;
+//   border: 1px solid #dddddd;
+//   background: #ffffff;
+//   border-radius: 0 5px 5px 0;
+//   cursor: pointer;
+// }
+// .d1 button:before {
+//   content: "\f002";
+//   font-family: FontAwesome;
+//   font-size: 16px;
+//   color: #F9F0DA;
+// }
+
+body {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+.news {
+  margin: 20 0;
+  // margin-top: 20;
+  // margin-bottom: 20;
+}
+
+.news-title {
+  margin-top: 10px;
+  font-family: "AvantGarde";
+  font-size: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#navi {
+  text-align: center;
+}
+
+#menu {
+  font-family: "AvantGarde";
+  font-size: 50px;
+  cursor: pointer;
+  background: $background-color-menu;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sources {
+  font-family: "AvantGarde";
+  font-size: 18px;
+  cursor: pointer;
+  height: 40px;
+  background: $background-color-source;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+  color: $text-color;
+  width: 100vw;
+  margin: 0;
+  background-color: $background-color;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 80vw;
+}
