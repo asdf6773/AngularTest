@@ -6,40 +6,35 @@
   <title>test</title>
   <link type="text/css" rel="stylesheet" href="main.css">
   <!-- <link type="text/css" rel="stylesheet" href="./lib/style.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="lib/normalize.css" /> -->
-  <!-- <link rel="stylesheet" href="lib/font-awesome.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="lib/normalize.css" />
+  <link rel="stylesheet" href="lib/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="lib/demo.css"> -->
   <!-- <link rel="stylesheet" href="lib/style.css"> -->
 </head>
 
 <body ng-controller="SimpleController">
-  <form>
-    <!-- <select id="select" ng-change="search()">
-      <option ng-repeat ="tag in tags"  onclick="aaa()" >{{tag.name}}</option>
-    </select> -->
+  <!-- <form>
     <select id="" ng-model="categroy" ng-options="tag.name for tag in tags" ng-change="selectedChange(categroy.name)">
     </select>
     <input id="searchInput" type="text" placeholder="请输入..." ng-model="content">
     <button ng-click="search(category.name,content)" type="submit">搜索</button>
-  </form>
-  </div>
-  <div class="tagWrap">
-    <div class="tags" ng-repeat="type in typeArr"><span class=tag-type>{{type.type}}:</span>{{type.content}}
-      <div class="close" ng-click="closeTag()"></div>
-    </div>
-  </div>
-  <!-- <div test></div> -->
-  <!-- <div id="navi">
-    <div id="menu" ng-click="collapse()">NEWS</div>
-    <div class="sources" ng-repeat="source in sources" ng-click="getNews(source)">{{source|uppercase}}</div>
-  </div> -->
-  <!-- <button ng-click="getNews('al-jazeera-english')">al-jazeera-english</button> -->
+  </form> -->
 
-  <ul>
-    <li class="news" ng-repeat="x in data |filter: some">
-      <div class="news-title">{{x.id}}</div>
-    </li>
-  </ul>
+  <div ng-view></div>
+  <script type="text/ng-template" id="view1.html">
+    <h2 ng-model = "search1"> search1 </h2> <a href='./#!view2'>view2</a>
+    <search type=""></search>
+
+
+  </script>
+  <script type="text/ng-template" id="view2.html">
+    <h2> search2 </h2> <a href='./#!view1'>view1</a>
+    <search type="tags2"></search>
+
+
+
+  </script>
+
   <script src="lib/data.js"></script>
   <script src="lib/angular.min.js"></script>
   <script src="lib/angular-route.min.js"></script>

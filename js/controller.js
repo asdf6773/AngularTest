@@ -9,12 +9,21 @@ app.controller('SimpleController', ['$scope', 'DataFactory', function($scope, Da
     name: 'ID',
     v: 'id'
   }];
+  $scope.tags2 = [{
+    name: '嘿嘿嘿',
+    v: 'machine'
+  }, {
+    name: '嘻嘻嘻',
+    v: 'admin'
+  }, {
+    name: '呵呵呵',
+    v: 'id'
+  }];
   var searchType;
   $scope.typeArr = [];
   $scope.search = (type, content) => {
-    if ((content != undefined) && (searchType != undefined))
+    if ((searchType != undefined) && (content != undefined))
       $scope.pushSearchType(content)
-      document.getElementById("searchInput").value='';
   }
   $scope.selectedChange = function(v) {
     searchType = v;
@@ -28,10 +37,11 @@ app.controller('SimpleController', ['$scope', 'DataFactory', function($scope, Da
       type: searchType,
       content: content
     });
+    $scope.content = undefined;
     console.log($scope.typeArr)
   }
-  $scope.closeTag = () => {
-
+  $scope.closeTag = (index) => {
+    $scope.typeArr.splice(index,1)
   }
 }])
 

@@ -14,61 +14,95 @@ div.search {
 form {
   position: relative;
   width: 300px;
-  // margin-top: 20px;
-  margin: 20px auto;
-}
-
-.d1 {
-  background: #ffffff;
-}
-
-.d1 input {
-  width: 100%;
-  height: 42px;
-  padding-left: 10px;
-  // border: 1px solid #dddddd;
+  margin: 0 auto;
   border-radius: 5px;
-  outline: none;
-  background: #ffffff;
-  color: #9E9C9C;
+  margin-bottom: 10px;
 }
+// #wrap {
+//   // width:220px;
+//   border: 1px solid #dddddd;
+//   border-radius: 5px;
+// }
+
+#select {
+  width: 100px;
+  border: 0;
+  border-radius: 10px;
+  margin-right: -6px;
+  height: 30px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-apearance: none;
+}
+
+.d2 {
+  border: 1px solid #dddddd;
+}
+
+// .d2 button,
+.d2 input {
+  border: none;
+  outline: none;
+}
+
+.d2 input {
+  width: 200px;
+  height: 42px;
+  background: #ffffff;
+  border-left: 1px solid #dddddd;
+  padding-left: 15px;
+}
+
+.d2 button {
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 5px;
+  border: 1px dotted #dddddd;
+  background: #ffffff;
+  background-image: url(./lib/mag1.png);
+  background-position: center;
+
+  cursor: pointer;
+}
+// .d2 button:before {
+//   content: "\f105";
+//   font-family: FontAwesome;
+//   color: #F9F0DA;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
 
 .tag-type {
   color: #888888;
 }
-.close{
-  line-height: 0px;
-  margin:0 5;
+
+.close {
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 5;
+    background-position: center;
+    background-image: url(./lib/x.png);
   display: inline-block;
-    border: 1px solid red;
-  width:10;
-  height:10;
+  // border: 1px solid red;
+  width: 10;
+  height: 10;
   // background-color: red;
 }
+
 .tags {
+  height:35px;
+
+  line-height: 35px;
+  list-style-type: none;
   // background:$background-color-source;
   float: left;
   border: 1px solid #dddddd;
-  margin: 5;
-  padding: 2 4;
+  margin: 2 2;
+  padding: 2 6;
 }
-// .d1 button {
-//   position: absolute;
-//   top: 0;
-//   right: 0px;
-//   width: 82px;
-//   height: 42px;
-//   border: 1px solid #dddddd;
-//   background: #ffffff;
-//   border-radius: 0 5px 5px 0;
-//   cursor: pointer;
-// }
-// .d1 button:before {
-//   content: "\f002";
-//   font-family: FontAwesome;
-//   font-size: 16px;
-//   color: #F9F0DA;
-// }
 
 body {
   font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
@@ -116,15 +150,14 @@ ul {
   justify-content: center;
   align-items: center;
 }
-
-li {
-  list-style-type: none;
-  text-align: center;
-  color: $text-color;
-  width: 100vw;
-  margin: 0;
-  background-color: $background-color;
-}
+// li {
+//   list-style-type: none;
+//   text-align: center;
+//   color: $text-color;
+//   width: 100vw;
+//   margin: 0;
+//   background-color: $background-color;
+// }
 
 body {
   padding: 0;

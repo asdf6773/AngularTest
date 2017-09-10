@@ -1,4 +1,5 @@
 var app = angular.module("myApp", ['ngRoute']); //route
+
 app.config(function($routeProvider) {
   $routeProvider
     .when('/view1', {
