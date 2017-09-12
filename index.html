@@ -19,29 +19,61 @@
     <input id="searchInput" type="text" placeholder="请输入..." ng-model="content">
     <button ng-click="search(category.name,content)" type="submit">搜索</button>
   </form> -->
+  <div id="management">
+    <!-- <div ng-view></div> -->
 
-  <div ng-view></div>
-  <script type="text/ng-template" id="view1.html">
-    <h2 ng-model = "search1"> search1 </h2> <a href='./#!view2'>view2</a>
+    <div id="title"> 设备管理 </div>
     <search type=""></search>
+    <h5>设备列表</h5>
+    <!-- <div class="dataDiv"> -->
+    <ul id="dataList">
+      <li class="dataLi" id='header'>
+        <div id="listWrap">
+          <div class="data id">ID</div>
+          <div class="data name">名称</div>
+          <div class="data price">价格</div>
+          <div class="data desc">描述</div>
+          <div class="data speci">净含量</div>
+          <div class="data unit">单位</div>
+          <div class="data created_at d">添加日期</div>
+          <div class="data updated_at d">更新日期</div>
+          <div class="data imgWrap"> 图片</div>
+        </div>
+      </li>
 
+      <li class='dataLi itemData' ng-repeat='d in data.data track by $index'>
+        <div id="listWrap">
+          <div class="data id">{{d.id}}</div>
+          <div class="data name">{{d.name}}</div>
+          <div class="data price">{{d.price}}</div>
+          <div class="data desc">{{d.desc}}</div>
+          <div class="data speci ">{{d.specification}}</div>
+          <div class="data unit">{{d.unit}}</div>
+          <div class="data created_at">{{d.created_at|limitTo:10}}<br>{{d.created_at|limitTo:-8}}</div>
+          <div class="data updated_at">{{d.updated_at|limitTo:10}}<br>{{d.updated_at|limitTo:-8}}</div>
+          <div class="data imgWrap"> <img class="img" ng-src="{{d.img}}"></div>
+        </div>
+      </li>
+    </ul>
+    <!-- </div> -->
+    {{data.current_page}}/{{data.last_page}}
 
-  </script>
-  <script type="text/ng-template" id="view2.html">
-    <h2> search2 </h2> <a href='./#!view1'>view1</a>
-    <search type="tags2"></search>
-
-
-
-  </script>
-
-  <script src="lib/data.js"></script>
-  <script src="lib/angular.min.js"></script>
-  <script src="lib/angular-route.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/directive.js"></script>
-  <script src="js/service.js"></script>
-  <script src="js/controller.js"></script>
+    <form>
+      <div id="triangle-right"></div>
+      <input type="text" name="lastname" value="">
+      <input type="submit" value="跳转">
+    </form>
+    <!-- <script type="text/ng-template" id="view1.html"> -->
+    <!-- <h2> Admin </h2> <a href='./#!view2'>view1</a> -->
+    <!-- <search type="tags2"></search> -->
+    </script>
+    <script src="lib/data.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/directive.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
 </body>
 
 </html>

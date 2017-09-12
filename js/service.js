@@ -7,8 +7,14 @@
 //     sources: ['the-next-web', 'al-jazeera-english', 'abc-news-au', 'ars-technica', 'associated-press']
 //   }
 // })
-app.factory('DataFactory', () => {
+app.factory('DataFactory', $http => {
   return {
+    getProductData: () => {
+      var data = $http.get('http://192.168.1.188/api/products')
+      // console.log(data)
+         return data
+
+       },
     getSearchType: (SearchType) => {
       return SearchType;
     },

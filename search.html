@@ -1,0 +1,23 @@
+<div>
+  <div id='wrap'>
+    <form class='d2'>
+      <select id='select' ng-model='categroy' ng-options='tag for tag in tags' ng-change='selectedChange(categroy)'>
+ </select>
+      <input id='searchInput' type='text' placeholder='请输入...' ng-model='content'>
+      <button id='searchButton' ng-click='search(category.name,content)' type='submit'></button>
+    </form>
+    <div id="filter">
+      <span>机型：</<span><select id='select1' ng-model='tp' ng-options='t.name for t in machineType'>
+  </select> <span>状态：</span>
+      <select id='select2' ng-model='md' ng-options='s.name for s in status'>
+  </select><span> 软件版本：</span>
+      <select id='select3' ng-model='vs' ng-options='v.name for v in version'>
+  </select></div>
+  </div>
+
+  <ul class='tagWrap'>
+    <li class='tags' ng-repeat='type in typeArr track by $index'><span class='tag-type'>{{type.type}}:</span>{{type.content}}
+      <div class='close' ng-click='closeTag($index)'></div>
+    </li>
+  </ul>
+</div>

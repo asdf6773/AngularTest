@@ -7,39 +7,172 @@ $background-color-menu: #11ffcc;
   src: url('lib/AvantGarde-Demi.woff');
 }
 
+#dataList {
+  // margin:0 50;
+  width: 95vw;
+  // text-align:center
+  border: 1px solid #dddddd;
+  overflow: scroll;
+}
+
 div.search {
   padding: 30px 0;
 }
 
+
+#dataLi {
+  width: 1444px;
+}
+
+#title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.img {
+  width: 40;
+}
+
+li {
+  white-space: nowrap;
+  height: 50px;
+  list-style-type: none;
+}
+
 form {
   position: relative;
-  width: 300px;
-  margin: 0 auto;
+  width: 350px;
+  margin: 0;
   border-radius: 5px;
   margin-bottom: 10px;
 }
-// #wrap {
-//   // width:220px;
-//   border: 1px solid #dddddd;
-//   border-radius: 5px;
+// .desc {
+//   text-align: left;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   width: 350px;
 // }
 
+option {
+  font-size: 10px;
+  padding: 10px;
+}
+
+#filter {
+  select {
+    font-size: 12px;
+    width: 100px;
+    border: 0;
+    border: 0 solid #dddddd;
+    height: 25px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-apearance: none;
+  }
+
+  span {
+    font-size: 10px;
+    color: #888888;
+  }
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-left: 10px;
+}
+
 #select {
+  font-size: 12px;
   width: 100px;
   border: 0;
   border-radius: 10px;
-  margin-right: -6px;
-  height: 30px;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-apearance: none;
+  // margin-right: -6px;
+  // font-size: 12px;
+  height: 25px;
+}
+
+#select option {
+  line-height: 10px;
+  font-size: 10px;
+}
+
+.desc {
+  height: 50px;
+}
+
+.data {
+  text-align: center;
+  font-size: 12px;
+  // white-space:nowrap;
+  // display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  width: 150px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id {
+  text-align: center;
+  width: 50px;
+}
+
+.speci {
+  width: 100px;
+  text-align: center;
+}
+
+.unit {
+  width: 60px;
+  text-align: center;
+}
+
+.imgWrap {
+  padding: 0 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemData:hover {
+  background: #fafafa;
+  cursor: pointer;
+  // float:left;
+}
+
+#listWrap {
+  // text-align: center;
+  width: 1440px;
+
+  .created_at {
+    line-height: 25px;
+    width: 200px;
+  }
+
+  .updated_at {
+    width: 150px;
+    line-height: 25px;
+  }
+}
+#header {
+  width: 1440;
+  background: #f4f4f4;
+  color: #666666;
+  .d{
+    line-height: 50px;
+  }
 }
 
 .d2 {
   border: 1px solid #dddddd;
 }
-
 // .d2 button,
+
 .d2 input {
   border: none;
   outline: none;
@@ -47,7 +180,7 @@ form {
 
 .d2 input {
   width: 200px;
-  height: 42px;
+  height: 30px;
   background: #ffffff;
   border-left: 1px solid #dddddd;
   padding-left: 15px;
@@ -57,14 +190,13 @@ form {
   height: 26px;
   width: 26px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 2px;
+  right: 2px;
   border-radius: 5px;
-  border: 1px dotted #dddddd;
+  border: 0 dotted #dddddd;
   background: #ffffff;
-  background-image: url(./lib/mag1.png);
+  background-image: url("./lib/mag1.png");
   background-position: center;
-
   cursor: pointer;
 }
 // .d2 button:before {
@@ -79,12 +211,17 @@ form {
   color: #888888;
 }
 
+#management {
+  padding: 20px;
+}
+
 .close {
   cursor: pointer;
   line-height: 0;
   margin: 0 5;
-    background-position: center;
-    background-image: url(./lib/x.png);
+  // border: 0px dotted #dddddd;
+  background-position: center;
+  background-image: url("./lib/x.png");
   display: inline-block;
   // border: 1px solid red;
   width: 10;
@@ -92,16 +229,27 @@ form {
   // background-color: red;
 }
 
-.tags {
-  height:35px;
+#filter {
+  margin: 20 0;
+}
 
-  line-height: 35px;
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #dddddd;
+  border-bottom: 10px solid transparent;
+}
+
+.tags {
+  height: 20px;
+  line-height: 20px;
   list-style-type: none;
   // background:$background-color-source;
-  float: left;
+  display: inline-block;
   border: 1px solid #dddddd;
-  margin: 2 2;
-  padding: 2 6;
+  margin: 2 2 2 0;
+  padding: 1 2;
 }
 
 body {
@@ -166,4 +314,22 @@ body {
 
 img {
   width: 80vw;
+}
+.desc {
+  // justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+.itemData {
+  .desc {
+    justify-content: flex-start;
+    // align-items: center;
+    // overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+  }
 }

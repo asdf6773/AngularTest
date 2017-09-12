@@ -2,25 +2,120 @@
 @font-face {
   font-family: "AvantGarde";
   src: url("lib/AvantGarde-Demi.woff"); }
+#dataList {
+  width: 95vw;
+  border: 1px solid #dddddd;
+  overflow: scroll; }
+
 div.search {
   padding: 30px 0; }
 
+#dataLi {
+  width: 1444px; }
+
+#title {
+  font-size: 20px;
+  margin-bottom: 20px; }
+
+.img {
+  width: 40; }
+
+li {
+  white-space: nowrap;
+  height: 50px;
+  list-style-type: none; }
+
 form {
   position: relative;
-  width: 300px;
-  margin: 0 auto;
+  width: 350px;
+  margin: 0;
   border-radius: 5px;
   margin-bottom: 10px; }
 
-#select {
+option {
+  font-size: 10px;
+  padding: 10px; }
+
+#filter select {
+  font-size: 12px;
   width: 100px;
   border: 0;
-  border-radius: 10px;
-  margin-right: -6px;
-  height: 30px;
+  border: 0 solid #dddddd;
+  height: 25px;
   appearance: none;
   -moz-appearance: none;
   -webkit-apearance: none; }
+#filter span {
+  font-size: 10px;
+  color: #888888; }
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-left: 10px; }
+
+#select {
+  font-size: 12px;
+  width: 100px;
+  border: 0;
+  border-radius: 10px;
+  height: 25px; }
+
+#select option {
+  line-height: 10px;
+  font-size: 10px; }
+
+.desc {
+  height: 50px; }
+
+.data {
+  text-align: center;
+  font-size: 12px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  width: 150px;
+  justify-content: center;
+  align-items: center; }
+
+.id {
+  text-align: center;
+  width: 50px; }
+
+.speci {
+  width: 100px;
+  text-align: center; }
+
+.unit {
+  width: 60px;
+  text-align: center; }
+
+.imgWrap {
+  padding: 0 20;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.itemData:hover {
+  background: #fafafa;
+  cursor: pointer; }
+
+#listWrap {
+  width: 1440px; }
+  #listWrap .created_at {
+    line-height: 25px;
+    width: 200px; }
+  #listWrap .updated_at {
+    width: 150px;
+    line-height: 25px; }
+
+#header {
+  width: 1440;
+  background: #f4f4f4;
+  color: #666666; }
+  #header .d {
+    line-height: 50px; }
 
 .d2 {
   border: 1px solid #dddddd; }
@@ -31,7 +126,7 @@ form {
 
 .d2 input {
   width: 200px;
-  height: 42px;
+  height: 30px;
   background: #ffffff;
   border-left: 1px solid #dddddd;
   padding-left: 15px; }
@@ -40,36 +135,49 @@ form {
   height: 26px;
   width: 26px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 2px;
+  right: 2px;
   border-radius: 5px;
-  border: 1px dotted #dddddd;
+  border: 0 dotted #dddddd;
   background: #ffffff;
-  background-image: url(./lib/mag1.png);
+  background-image: url("./lib/mag1.png");
   background-position: center;
   cursor: pointer; }
 
 .tag-type {
   color: #888888; }
 
+#management {
+  padding: 20px; }
+
 .close {
   cursor: pointer;
   line-height: 0;
   margin: 0 5;
   background-position: center;
-  background-image: url(./lib/x.png);
+  background-image: url("./lib/x.png");
   display: inline-block;
   width: 10;
   height: 10; }
 
+#filter {
+  margin: 20 0; }
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #dddddd;
+  border-bottom: 10px solid transparent; }
+
 .tags {
-  height: 35px;
-  line-height: 35px;
+  height: 20px;
+  line-height: 20px;
   list-style-type: none;
-  float: left;
+  display: inline-block;
   border: 1px solid #dddddd;
-  margin: 2 2;
-  padding: 2 6; }
+  margin: 2 2 2 0;
+  padding: 1 2; }
 
 body {
   font-family: "Arial", "Microsoft YaHei", "榛戜綋", "瀹嬩綋", sans-serif; }
@@ -115,5 +223,18 @@ body {
 
 img {
   width: 80vw; }
+
+.desc {
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px; }
+
+.itemData .desc {
+  justify-content: flex-start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px; }
 
 /*# sourceMappingURL=main.css.map */
